@@ -1,0 +1,156 @@
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+label, input, p {
+  margin: 10px 0;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 20px);
+  margin: 5px 0;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+button.print {
+  background-color: #007bff;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  input[type="text"], input[type="number"], input[type="date"] {
+    padding: 8px;
+    width: calc(100% - 16px);
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    margin: 5px 0;
+  }
+
+  .signatures {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  body, .container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    background-color: white;
+  }
+
+  .buttons, .buttons * {
+    display: none !important;
+  }
+
+  .container {
+    border: none;
+    page-break-inside: avoid;
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  label, p {
+    font-size: 12px;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 8px;
+    width: calc(100% - 16px);
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  .signatures {
+    display: flex;
+    justify-content: space-between;
+  }
+}
